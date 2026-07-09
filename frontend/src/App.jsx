@@ -14,7 +14,7 @@ export default function App() {
   const [review, setReview] = useState("");
 
   const handleReview = () => {
-    axios.post("http://localhost:3000/ai/getResponse/", { code })
+    axios.post("https://ai-code-review-697s.onrender.com/ai/getResponse", { code })
       .then((response) => {
         console.log(response.data);
         setReview(response.data);
